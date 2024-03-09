@@ -1,0 +1,17 @@
+.App {
+  display: flex;
+
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  gap:1rem;
+  overflow: hidden;
+ }
+ 
+ .box {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+ }
