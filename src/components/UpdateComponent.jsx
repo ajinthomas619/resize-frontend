@@ -10,7 +10,7 @@ const UpdateComponent = () => {
     const [selectedEntryId, setSelectedEntryId] = useState(null);
     
     const fetchData =() => {
-        axios.get('http://localhost:8080/data')
+        axios.get('https://jmjmusichouse.joeleldho.com/data')
         .then(response => {
             setData(response.data || []);
         })
@@ -31,7 +31,7 @@ const handleEditFormClose = () =>{
     fetchData()
 }
 const handleDelete =(entryId) =>{
-    axios.delete('http://localhost:8080/delete',{data:{_id:entryId}})
+    axios.delete('https://jmjmusichouse.joeleldho.com/delete',{data:{_id:entryId}})
     .then(response => {
         if(response.status === 200){
             console.log("Entry deleted successfully")
