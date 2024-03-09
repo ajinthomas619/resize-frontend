@@ -3,7 +3,7 @@ import FormComponent from './FormComponent'
 import axios from 'axios'
 const AddComponent = () => {
     const handleSubmit = (data) => {
-        axios.post('http://localhost:3000/add', { data }) 
+        axios.post('http://localhost:8080/add', { data }) 
         .then(response => {
             console.log(response.data); 
         })

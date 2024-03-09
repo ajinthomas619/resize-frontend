@@ -10,7 +10,7 @@ const UpdateComponent = () => {
     const [selectedEntryId, setSelectedEntryId] = useState(null);
     
     const fetchData =() => {
-        axios.get('http://localhost:3000/data')
+        axios.get('http://localhost:8080/data')
         .then(response => {
             setData(response.data || []);
         })
@@ -31,7 +31,7 @@ const handleEditFormClose = () =>{
     fetchData()
 }
 const handleDelete =(entryId) =>{
-    axios.delete('http://localhost:3000/delete',{data:{_id:entryId}})
+    axios.delete('http://localhost:8080/delete',{data:{_id:entryId}})
     .then(response => {
         if(response.status === 200){
             console.log("Entry deleted successfully")

@@ -12,7 +12,7 @@ const EditForm =({data,onClose,id}) => {
         const data ={formData,id}
      
         e.preventDefault()
-        axios.put('http://localhost:3000/update',   data ) 
+        axios.put('http://localhost:8080/update',   data ) 
         .then(response => {
             console.log(response.data); 
         })

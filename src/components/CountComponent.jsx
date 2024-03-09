@@ -5,7 +5,7 @@ const CountComponent = ()=>{
 const [count,setCount] = useState(0)
 const fetchData = async() =>{
     try{
-       axios.get("http://localhost:3000/count")
+       axios.get("http://localhost:8080/count")
         .then(response => {
          console.log(response.data)
          setCount(response.data.add + response.data.update);
